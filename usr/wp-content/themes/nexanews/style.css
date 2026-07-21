@@ -1,0 +1,188 @@
+/*
+Theme Name: NexaNews
+Theme URI: https://could.ai/themes/nexanews
+Author: CouldAI
+Author URI: https://could.ai
+Description: A premium pixel-perfect responsive news portal and magazine theme. Built with HTML5, CSS3, and Vanilla JavaScript. Features a pure white background, sticky header, breaking news ticker, mega menu, category navigation, and responsive grid layouts. SEO optimized, Core Web Vitals compliant, and accessible.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nexanews
+Tags: blog, news, magazine, responsive-layout, custom-menu, custom-logo, featured-images, translation-ready, sticky-post, threaded-comments
+
+NexaNews WordPress Theme, Copyright 2026 CouldAI.
+NexaNews is distributed under the terms of the GNU GPL.
+*/
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d47a1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    background: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+    padding: 5px 0;
+    font-size: 0.85rem;
+}
+
+.header-main {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.site-title a {
+    color: #111;
+}
+
+/* Navigation */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation a {
+    color: #111;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.main-navigation a:hover {
+    color: #1a73e8;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.featured-slider, .latest-news-grid {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Post Cards */
+.post-card {
+    margin-bottom: 30px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.site-footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.site-info {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.site-info a {
+    color: #fff;
+}
